@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Mjumbe Poe</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #edc;
+      }
+
+      .card {
+        margin: 2%;
+        border: 1px solid #aaa;
+        height: 96%;
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 0px 3px 5px #cba;
+      }
+
+      .headshot, .signature, .title, .contact {
+        display: block;
+        text-align: center;
+      }
+
+      .headshot img {
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 50%;
+      }
+
+      .signature img {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 2em;
+      }
+
+      .card hr {
+        border: none;
+        background-color: black;
+        height: 1px;
+        opacity: 0.15;
+        margin: 0 5em;
+      }
+
+      .card-top {
+        height: 70%;
+      }
+
+      .card-top-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .card-bottom {
+        height: 29%;
+      }
+
+      .card-bottom-wrapper {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .title {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .contact {
+        font-size: 0; /* For "removing" whitespace between elements */
+      }
+      .contact a {
+        display: inline-block;
+        width: 20%;
+      }
+      .contact img {
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="card">
+      <div class="card-top">
+        <div class="card-top-wrapper">
+          <span class="headshot"><img src="headshot.png" title="Mjumbe Poe" alt="Headshot"></span>
+          <span class="signature"><img src="signature.png" alt="Mjumbe Poe"></span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="card-bottom">
+        <div class="card-bottom-wrapper">
+          <span class="title">Urban Technologist</span>
+          <div class="contact">
+            <a class="contact-github" href="https://www.github.com/mjumbewu/"><img src="github.png"></a>
+            <a class="contact-twitter" href="https://www.twitter.com/mjumbewu/"><img src="twitter.png"></a>
+            <a class="contact-linkedin" href="https://www.linkedin.com/in/mjumbewu/"><img src="linkedin.png"></a>
+            <a class="contact-email" href="mailto:mjumbewu+mpdc@gmail.com"><img src="email.png"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
