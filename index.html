@@ -7,15 +7,35 @@
 <html>
   <head>
     <title>Mjumbe Poe</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#001d75">
 
     <style>
+      html, body {
+        height: 100%;
+      }
+
       body {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
         background-color: #eeddcc;
+      }
+
+      hr {
+        background-color: #968c81;
+        border: none;
+        height: 1px;
+        margin: 2em auto;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+      }
+
+      section:last-child {
+        margin-bottom: 2em;
       }
 
       .card {
@@ -54,7 +74,7 @@
       }
 
       .card-top {
-        height: 70%;
+        height: 65%;
       }
 
       .card-top-wrapper {
@@ -64,7 +84,7 @@
       }
 
       .card-bottom {
-        height: 29%;
+        height: 25%;
       }
 
       .card-bottom-wrapper {
@@ -89,9 +109,119 @@
         width: 50%;
       }
 
+      .down-arrow {
+        display: block;
+        margin: auto;
+        background: #001d75;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+
+        box-shadow: 0px 3px 5px #ababab;
+      }
+
+      .goal-statement {
+        padding: 0 2rem;
+        margin-top: 3em;
+      }
+
+      /* ==================================
+       * Chevron code borrowed from
+       * http://codepen.io/jonneal/pen/kptBs
+       * ================================== */
+      .chevron::before {
+        border-style: solid;
+        border-width: 0.25em 0.25em 0 0;
+        content: '';
+        display: inline-block;
+        height: 0.45em;
+        left: 0.15em;
+        position: relative;
+        top: 0.15em;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        width: 0.45em;
+      }
+      .chevron.right:before {
+        left: 0;
+        transform: rotate(45deg);
+      }
+      .chevron.bottom:before {
+        top: 0;
+        transform: translateX(-25%) translateY(75%) translateY(1px) rotate(135deg);
+      }
+      .chevron.left:before {
+        left: 0.25em;
+        transform: rotate(-135deg);
+      }
+
+      /* ==================================
+       * Bounce animation code borrowed from
+       * https://github.com/daneden/animate.css
+       * ================================== */
+      .animated {
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+      }
+      .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+      }
+      @-webkit-keyframes bounce {
+        0%, 10%, 27%, 40%, 50%, 100% {
+          -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          -webkit-transform: translate3d(0,0,0);
+        }
+        20%, 22% {
+          -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+          -webkit-transform: translate3d(0, -4px, 0);
+        }
+        35% {
+          -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+          -webkit-transform: translate3d(0, -2px, 0);
+        }
+        45% {
+          -webkit-transform: translate3d(0,-1px,0);
+        }
+      }
+      @keyframes bounce {
+        0%, 10%, 27%, 40%, 50%, 100% {
+          transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+          transform: translate3d(0,0,0);
+        }
+        20%, 22% {
+          transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+          transform: translate3d(0, -4px, 0);
+        }
+        35% {
+          transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+          transform: translate3d(0, -2px, 0);
+        }
+        45% {
+          transform: translate3d(0,-1px,0);
+        }
+      }
+      .bounce {
+        -webkit-animation-name: bounce;
+                animation-name: bounce;
+        -webkit-transform-origin: center bottom;
+            -ms-transform-origin: center bottom;
+                transform-origin: center bottom;
+      }
+
+
       @media (min-width: 27rem) {
-        .card {
+        .card, .goal-statement {
           max-width: 45rem;
+          margin: auto;
+        }
+
+        .card {
           max-height: 30rem;
           margin: 0 2%;
 
@@ -122,11 +252,24 @@
           height: 100%;
           left: 50%;
         }
+        .continue-down {
+          position: absolute;
+          bottom: 0.5em;
+          width: 100%;
+        }
       }
 
       @media (min-width: 47rem) {
         .card {
           margin: 0 auto;
+        }
+
+        .continue-down {
+          display: none;
+        }
+
+        .goal-statement {
+          margin-top: 6em;
         }
       }
     </style>
@@ -154,6 +297,15 @@
           </div>
         </div>
       </div>
+
+      <div class="continue-down">
+        <span class="down-arrow"> <span class="chevron bottom bounce animated infinite"></span> </span>
+      </div>
+    </section>
+
+    <section class="goal-statement">
+      <hr>
+      <p>I use technology as a tool to help build the capacity of individuals and communities to shape their cities, their neighborhoods, and their own lives.  This perspective of technology as a means for social empowerment guides my professional and "extracurricular" development.</p>
     </section>
   </body>
 </html>
