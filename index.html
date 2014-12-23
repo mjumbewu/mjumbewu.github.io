@@ -123,9 +123,21 @@
         box-shadow: 0px 3px 5px #ababab;
       }
 
-      .goal-statement {
+      .goal-statement, .projects, .events, .organizations {
         padding: 0 2rem;
         margin-top: 3em;
+      }
+
+      section header h3 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      section header p {
+        margin: 0;
+        font-size: 0.8em;
+        color: black;
+        opacity: 0.5;
       }
 
       /* ==================================
@@ -216,7 +228,7 @@
 
 
       @media (min-width: 27rem) {
-        .card, .goal-statement {
+        section {
           max-width: 45rem;
           margin: auto;
         }
@@ -306,6 +318,77 @@
     <section class="goal-statement">
       <hr>
       <p>I use technology as a tool to help build the capacity of individuals and communities to shape their cities, their neighborhoods, and their own lives.  This perspective of technology as a means for social empowerment guides my professional and "extracurricular" development.</p>
+    </section>
+
+    <section class="projects">
+      <hr>
+      <h2>Projects</h2>
+
+      <article class="project">
+        <header>
+          <h3>Planbox</h3>
+          <p>OpenPlans, Since 2013</p>
+        </header>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Shareabouts</h3>
+          <p>OpenPlans, Since 2012</p>
+        </header>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Councilmatic</h3>
+          <p>Code for America, Since 2011</p>
+        </header>
+      </article>
+    </section>
+
+    <section class="events">
+      <hr>
+      <h2>Conferences and Events</h2>
+
+      <article class="event">
+        <header>
+          <h3>International Conference on Appropriate Technology</h3>
+          <p>2010, 2012, 2014</p>
+        </header>
+      </article>
+
+      <article class="event">
+        <header>
+          <h3>Planning Camp</h3>
+          <p>2013, 2014</p>
+        </header>
+      </article>
+    </section>
+
+    <section class="organizations">
+      <hr>
+      <h2>Organizations</h2>
+
+      <article class="organization">
+        <header>
+          <h3>Coded by Kids</h3>
+          <p>Since 2014</p>
+        </header>
+      </article>
+
+      <article class="organization">
+        <header>
+          <h3>The Hacktory</h3>
+          <p>Since 2014</p>
+        </header>
+      </article>
+
+      <article class="organization">
+        <header>
+          <h3>Code for Philly</h3>
+          <p>Since 2012</p>
+        </header>
+      </article>
     </section>
   </body>
 </html>
