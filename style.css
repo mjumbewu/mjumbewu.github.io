@@ -5,15 +5,22 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #eeddcc; }
+  background-color: #eeeeee;
+  color: rgba(0, 0, 0, 0.85); }
+
+h1, h2, header {
+  color: #e66809; }
 
 .content-scrollbox {
   width: 100%;
   height: 100%;
   overflow: auto; }
 
+.contact {
+  opacity: 0.85; }
+
 hr {
-  background-color: #968c81;
+  background-color: rgba(0, 0, 0, 0.25);
   border: none;
   height: 1px;
   margin: 2em auto; }
@@ -91,7 +98,7 @@ section:last-child {
 .down-arrow {
   display: block;
   margin: auto;
-  background: #001d75;
+  background: #e66809;
   width: 2em;
   height: 2em;
   line-height: 2em;
@@ -110,16 +117,24 @@ section header h3 {
   font-weight: normal; }
 
 article {
-  margin-bottom: 3rem; }
+  padding-bottom: 2rem;
+  margin-bottom: 1rem; }
+
+section:not(:first-child)::after {
+  content: '\00B7\00B7';
+  display: block;
+  text-align: center;
+  color: #001d75;
+  font-size: 2rem; }
 
 section header p {
   margin: 0;
   font-size: 0.8em;
-  color: red;
+  color: rgba(0, 0, 0, 0.75);
   opacity: 0.5; }
 
 .screenshots {
-  background-color: silver;
+  background-color: white;
   white-space: nowrap;
   width: 100%;
   overflow-x: auto;
@@ -289,6 +304,6 @@ section header p {
   section:not(:first-child) {
     margin-left: 20em; }
     section:not(:first-child) p, section:not(:first-child) h1, section:not(:first-child) h2, section:not(:first-child) h3 {
-      max-width: 40rem;
+      max-width: 45rem;
       margin-left: auto;
       margin-right: auto; } }
