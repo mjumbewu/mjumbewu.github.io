@@ -143,6 +143,10 @@ section header h3 {
   font-weight: normal;
 }
 
+article {
+  margin-bottom: 3rem;
+}
+
 section header p {
   margin: 0;
   font-size: 0.8em;
@@ -157,6 +161,7 @@ section header p {
   width: 100%;
   overflow-x: auto;
   padding: 1em 0;
+  margin-bottom: 0.5rem;
 }
 
 .screenshot {
@@ -293,14 +298,13 @@ section header p {
 }
 
 
-@media (min-width: 27rem) {
+@media (min-width: 27rem) and (max-width: 46.999rem) {
   section {
     max-width: 45rem;
     margin: auto;
   }
 
   .card {
-    max-height: 30rem;
     margin: 0 2%;
 
     position: relative;
@@ -339,14 +343,31 @@ section header p {
 
 @media (min-width: 47rem) {
   .card {
-    margin: 0 auto;
+    position: fixed;
+    float: left;
+    width: 20em;
+    margin: 0 1em 0 0;
+
+    border-radius: 0;
+    height: 100%;
+    box-shadow: 0 0 10px $background-color-dark;
   }
 
   .continue-down {
     display: none;
   }
 
-  .goal-statement {
-    margin-top: 7em;
+  section:not(:first-child) {
+    margin-left: 20em;
+
+    p, h1, h2, h3 {
+      max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+
+  // .goal-statement {
+  //   margin-top: 7em;
+  // }
 }
