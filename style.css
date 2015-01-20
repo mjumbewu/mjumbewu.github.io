@@ -32,6 +32,9 @@ p {
   font-size: 0.9rem;
   line-height: 1.3rem; }
 
+a, a:link, a:visited, a:active {
+  color: #001d75; }
+
 section:last-child {
   margin-bottom: 2em; }
 

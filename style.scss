@@ -53,6 +53,10 @@ p {
   line-height: 1.3rem;
 }
 
+a, a:link, a:visited, a:active {
+  color: $accent-color-3;
+}
+
 section:last-child {
   margin-bottom: 2em;
 }
