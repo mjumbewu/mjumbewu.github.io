@@ -1,8 +1,3 @@
-<!-- Colors:
-     - background: #eeddcc
-     - text: black
-     - accent: #001d75 (dark #00081f, light #0032c9)
--->
 
 <html>
   <head>
@@ -10,385 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#001d75">
 
-    <style>
-      html, body {
-        height: 100%;
-      }
-
-      body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #eeddcc;
-      }
-
-      hr {
-        background-color: #968c81;
-        border: none;
-        height: 1px;
-        margin: 2em auto;
-      }
-
-      h2 {
-        margin-bottom: 0.5rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-      }
-
-      section:last-child {
-        margin-bottom: 2em;
-      }
-
-      .card {
-        margin: 2%;
-        border-bottom: 1px solid #575757;
-        border-radius: 4px;
-        height: 96%;
-        box-sizing: border-box;
-        background-color: white;
-        box-shadow: 0px 1px 2px #968c81;
-      }
-
-      .headshot, .signature, .title, .contact {
-        display: block;
-        text-align: center;
-      }
-
-      .headshot img {
-        border: 1px solid #ababab;
-        border-radius: 50%;
-        width: 50%;
-        padding: 2px;
-      }
-
-      .signature img {
-        width: 100%;
-        box-sizing: border-box;
-        padding-left: 2em;
-      }
-
-      .card hr {
-        border: none;
-        background-color: #ababab;
-        height: 1px;
-        margin: 0 5em;
-      }
-
-      .card-top {
-        height: 65%;
-      }
-
-      .card-top-wrapper {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .card-bottom {
-        height: 25%;
-      }
-
-      .card-bottom-wrapper {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .contact {
-        font-size: 0; /* For "removing" whitespace between elements */
-      }
-      .contact a {
-        display: inline-block;
-        width: 20%;
-      }
-      .contact img {
-        width: 50%;
-      }
-
-      .down-arrow {
-        display: block;
-        margin: auto;
-        background: #001d75;
-        width: 2em;
-        height: 2em;
-        line-height: 2em;
-        border-radius: 50%;
-        color: white;
-        text-align: center;
-
-        box-shadow: 0px 3px 5px #ababab;
-      }
-
-      .goal-statement, .projects, .events, .organizations {
-        padding: 0 2rem;
-        margin-top: 3em;
-      }
-
-      section header h3 {
-        margin: 0;
-        font-weight: normal;
-      }
-
-      section header p {
-        margin: 0;
-        font-size: 0.8em;
-        color: black;
-        opacity: 0.5;
-      }
-
-      /* ==================================
-       * Chevron code borrowed from
-       * http://codepen.io/jonneal/pen/kptBs
-       * ================================== */
-      .chevron::before {
-        border-style: solid;
-        border-width: 0.25em 0.25em 0 0;
-        content: '';
-        display: inline-block;
-        height: 0.45em;
-        left: 0.15em;
-        position: relative;
-        top: 0.15em;
-        transform: rotate(-45deg);
-        vertical-align: top;
-        width: 0.45em;
-      }
-      .chevron.right:before {
-        left: 0;
-        transform: rotate(45deg);
-      }
-      .chevron.bottom:before {
-        top: 0;
-        transform: translateX(-25%) translateY(75%) translateY(1px) rotate(135deg);
-      }
-      .chevron.left:before {
-        left: 0.25em;
-        transform: rotate(-135deg);
-      }
-
-      /* ==================================
-       * Bounce animation code borrowed from
-       * https://github.com/daneden/animate.css
-       * ================================== */
-      .animated {
-        -webkit-animation-duration: 2s;
-                animation-duration: 2s;
-        -webkit-animation-fill-mode: both;
-                animation-fill-mode: both;
-      }
-      .animated.infinite {
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-      }
-      @-webkit-keyframes bounce {
-        0%, 10%, 27%, 40%, 50%, 100% {
-          -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-          -webkit-transform: translate3d(0,0,0);
-        }
-        20%, 22% {
-          -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-          -webkit-transform: translate3d(0, -4px, 0);
-        }
-        35% {
-          -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-          -webkit-transform: translate3d(0, -2px, 0);
-        }
-        45% {
-          -webkit-transform: translate3d(0,-1px,0);
-        }
-      }
-      @keyframes bounce {
-        0%, 10%, 27%, 40%, 50%, 100% {
-          transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-          transform: translate3d(0,0,0);
-        }
-        20%, 22% {
-          transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-          transform: translate3d(0, -4px, 0);
-        }
-        35% {
-          transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-          transform: translate3d(0, -2px, 0);
-        }
-        45% {
-          transform: translate3d(0,-1px,0);
-        }
-      }
-      .bounce {
-        -webkit-animation-name: bounce;
-                animation-name: bounce;
-        -webkit-transform-origin: center bottom;
-            -ms-transform-origin: center bottom;
-                transform-origin: center bottom;
-      }
-
-
-      @media (min-width: 27rem) {
-        section {
-          max-width: 45rem;
-          margin: auto;
-        }
-
-        .card {
-          max-height: 30rem;
-          margin: 0 2%;
-
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        .card-top {
-          position: absolute;
-          display: inline-block;
-          height: 100%;
-          width: 50%;
-        }
-        .card hr {
-          display: inline-block;
-          margin: 0;
-
-          position: absolute;
-          left: 50%;
-          top: 15%;
-          height: 70%;
-          width: 1px;
-        }
-        .card-bottom {
-          position: absolute;
-          display: inline-block;
-          width: 50%;
-          height: 100%;
-          left: 50%;
-        }
-        .continue-down {
-          position: absolute;
-          bottom: 0.5em;
-          width: 100%;
-        }
-      }
-
-      @media (min-width: 47rem) {
-        .card {
-          margin: 0 auto;
-        }
-
-        .continue-down {
-          display: none;
-        }
-
-        .goal-statement {
-          margin-top: 7em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <section class="card">
-      <div class="card-top">
-        <div class="card-top-wrapper">
-          <span class="headshot"><img src="headshot.png" title="Mjumbe Poe" alt="Headshot"></span>
-          <span class="signature"><img src="signature.png" alt="Mjumbe Poe"></span>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="card-bottom">
-        <div class="card-bottom-wrapper">
-          <span class="title">Urban Technologist</span>
-          <div class="contact">
-            <a class="contact-github" href="https://www.github.com/mjumbewu/"><img src="github.png"></a>
-            <a class="contact-twitter" href="https://www.twitter.com/mjumbewu/"><img src="twitter.png"></a>
-            <a class="contact-linkedin" href="https://www.linkedin.com/in/mjumbewu/"><img src="linkedin.png"></a>
-            <a class="contact-email" href="mailto:mjumbewu+mpdc@gmail.com"><img src="email.png"></a>
+    <div class="content-scrollbox">
+      <section class="card">
+        <div class="card-top">
+          <div class="card-top-wrapper">
+            <span class="headshot"><img src="headshot.png" title="Mjumbe Poe" alt="Headshot"></span>
+            <span class="signature"><img src="signature.png" alt="Mjumbe Poe"></span>
           </div>
         </div>
-      </div>
 
-      <div class="continue-down">
-        <span class="down-arrow"> <span class="chevron bottom bounce animated infinite"></span> </span>
-      </div>
-    </section>
+        <hr>
 
-    <section class="goal-statement">
-      <p>I use technology as a tool to help build the capacity of individuals and communities to shape their cities, their neighborhoods, and their own lives.  This perspective of technology as a means for social empowerment guides my professional and "extracurricular" development.</p>
-    </section>
+        <div class="card-bottom">
+          <div class="card-bottom-wrapper">
+            <span class="title">Urban Technologist</span>
+            <div class="contact">
+              <a class="contact-github" href="https://www.github.com/mjumbewu/"><img src="github.png"></a>
+              <a class="contact-twitter" href="https://www.twitter.com/mjumbewu/"><img src="twitter.png"></a>
+              <a class="contact-linkedin" href="https://www.linkedin.com/in/mjumbewu/"><img src="linkedin.png"></a>
+              <a class="contact-email" href="mailto:mjumbewu+mpdc@gmail.com"><img src="email.png"></a>
+            </div>
+          </div>
+        </div>
 
-    <section class="projects">
-      <h2>Projects</h2>
+        <div class="continue-down bounce animated infinite">
+          <span class="down-arrow"> <span class="chevron bottom"></span> </span>
+        </div>
+      </section>
 
-      <article class="project">
-        <header>
-          <h3>Planbox</h3>
-          <p>OpenPlans, Since 2013</p>
-        </header>
-      </article>
+      <section class="goal-statement">
+        <p>I use technology as a tool to help build the capacity of individuals and communities to shape their cities, their neighborhoods, and their own lives.  This perspective of technology as a means for social empowerment guides my professional and "extracurricular" development.</p>
+      </section>
 
-      <article class="project">
-        <header>
-          <h3>Shareabouts</h3>
-          <p>OpenPlans, Since 2012</p>
-        </header>
-      </article>
+      <section class="jobs">
+        <article class="job">
+          <h2>Urban Technologist at OpenPlans</h2>
 
-      <article class="project">
-        <header>
-          <h3>Councilmatic</h3>
-          <p>Code for America, Since 2011</p>
-        </header>
-      </article>
-    </section>
+          <p>I work on a small team with amazing people on projects that empower people to get involved in planning for the future of their communities and cities. Among other projects, we work on the following:</p>
 
-    <section class="events">
-      <h2>Conferences and Events</h2>
+          <p>Since 2012, we have been developing Shareabouts (http://openplans.org/shareabouts/), a flexible tool for gathering geography-specific public input. I have been primarily responsible for developing the Django REST Framework-based Shareabouts data server, reporting tools, and core parts of the mapping interface.</p>
 
-      <article class="event">
-        <header>
-          <h3>International Conference on Appropriate Technology</h3>
-          <p>2010, 2012, 2014</p>
-        </header>
-      </article>
+          <p>In early 2014, we began working on OpenPlans (http://openplans.org/), an outgrowth of our experience building tools and web sites for urban planning projects. I work on many parts of this project: server-side data management, external service integration, APIs, browser-side interface development, and testing.</p>
+        </article>
 
-      <article class="event">
-        <header>
-          <h3>Planning Camp</h3>
-          <p>2013, 2014</p>
-        </header>
-      </article>
-    </section>
+        <article class="job">
+          <h2>Code for America Fellow</h2>
 
-    <section class="organizations">
-      <h2>Organizations</h2>
+          <p>As one of Code for America's inaugural fellows, I worked with the cities of Philadelphia and Seattle to identify and extend the Change by Us platform (http://changeby.us/) for their needs. As part of that process, I along with my fellowship team helped Local Projects, the original authors of Change by Us, release the project as open source.</p>
 
-      <article class="organization">
-        <header>
-          <h3>Coded by Kids</h3>
-          <p>Since 2014</p>
-        </header>
-      </article>
+          <p>I also started the Councilmatic project (http://councilmatic.org/). I was frustrated at the relative difficulty of accessing legislative data in Philadelphia, so started creating a scraper, and later a website for finding and subscribing to relevant artifacts of city council meetings. This project is open source and has since been adopted in several other US cities.</p>
+        </article>
 
-      <article class="organization">
-        <header>
-          <h3>The Hacktory</h3>
-          <p>Since 2014</p>
-        </header>
-      </article>
+        <p>For a complete work history, check out my <a href="https://www.linkedin.com/in/mjumbewu">Linked In</a> profile.
+      </section>
 
-      <article class="organization">
-        <header>
-          <h3>Code for Philly</h3>
-          <p>Since 2012</p>
-        </header>
-      </article>
-    </section>
+      <section class="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <header>
+            <h3>Planbox</h3>
+            <p>OpenPlans, Since 2013</p>
+          </header>
+
+          <div class="screenshots">
+            <div class="desktop screenshot"><img src="screenshots/planbox-home-desktop.jpg"></div>
+            <div class="desktop screenshot"><img src="screenshots/planbox-profile-desktop.jpg"></div>
+          </div>
+
+          <p>Planbox is a platform for getting the word out about your planning projects. Its beautiful and easy to use interface will help you get your project online in no time.</p>
+
+          <p>I have a hand in every aspect of Planbox.</p>
+        </article>
+
+        <article class="project">
+          <header>
+            <h3>Shareabouts</h3>
+            <p>OpenPlans, Since 2012</p>
+          </header>
+
+          <div class="screenshots">
+            <div class="mobile screenshot"><img src="screenshots/shareabouts-cdot-mobile.jpg"></div>
+            <div class="mobile screenshot"><img src="screenshots/shareabouts-macon-mobile.jpg"></div>
+            <div class="mobile screenshot"><img src="screenshots/shareabouts-philly-mobile.jpg"></div>
+          </div>
+
+          <p>Shareabouts is an online mapping tool to gather crowdsourced public input in a social and engaging process. Using Shareabouts, people can drop a pin on a map to provide ideas, suggestions, and comments for planning and design issues. And as a mobile-friendly application, Shareabouts makes it easy to add input on the go.</p>
+        </article>
+
+        <article class="project">
+          <header>
+            <h3>Councilmatic</h3>
+            <p>Code for America, Since 2011</p>
+          </header>
+
+          <div class="screenshots">
+            <div class="desktop screenshot"><img src="screenshots/councilmatic-home-desktop.jpg"></div>
+            <div class="desktop screenshot"><img src="screenshots/councilmatic-bill-desktop.jpg"></div>
+            <div class="mobile screenshot"><img src="screenshots/councilmatic-home-mobile.jpg"></div>
+            <div class="mobile screenshot"><img src="screenshots/councilmatic-list-mobile.jpg"></div>
+          </div>
+
+          <p>A subscription service for city council legislative information, started in Philadelphia.</p>
+        </article>
+      </section>
+
+      <section class="events">
+        <h2>Conferences and Events</h2>
+
+        <article class="event">
+          <header>
+            <h3>International Conference on Appropriate Technology</h3>
+            <p>2010, 2012, 2014</p>
+          </header>
+        </article>
+
+        <article class="event">
+          <header>
+            <h3>Planning Camp</h3>
+            <p>2013, 2014</p>
+          </header>
+        </article>
+      </section>
+
+      <section class="organizations">
+        <h2>Organizations</h2>
+
+        <article class="organization">
+          <header>
+            <h3>Coded by Kids</h3>
+            <p>Since 2014</p>
+          </header>
+        </article>
+
+        <article class="organization">
+          <header>
+            <h3>The Hacktory</h3>
+            <p>Since 2014</p>
+          </header>
+        </article>
+
+        <article class="organization">
+          <header>
+            <h3>International Network on Appropriate Technology</h3>
+            <p>Since 2013</p>
+          </header>
+        </article>
+
+        <article class="organization">
+          <header>
+            <h3>Code for Philly</h3>
+            <p>Since 2012</p>
+          </header>
+        </article>
+      </section>
+    </div>
   </body>
 </html>
