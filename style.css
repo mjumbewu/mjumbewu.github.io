@@ -309,4 +309,7 @@ section header p {
     section:not(:first-child) p, section:not(:first-child) h1, section:not(:first-child) h2, section:not(:first-child) h3 {
       max-width: 45rem;
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto; }
+    section:not(:first-child) .sswrapper {
+      max-width: 47rem;
+      margin: auto; } }
