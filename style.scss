@@ -10,6 +10,13 @@ $accent-color-3: #001d75;
 $shadow: 0px 7px 10px;
 $shadow-color: rgba(0,0,0,0.25);
 
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
 
 html, body {
   height: 100%;
@@ -102,7 +109,7 @@ section:last-child {
 .card-top-wrapper {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  @include transform(translateY(-50%));
 }
 
 .card-bottom {
@@ -112,7 +119,7 @@ section:last-child {
 .card-bottom-wrapper {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  @include transform(translateY(-50%));
 }
 
 .title {
@@ -250,21 +257,21 @@ section header p {
   left: 0.15em;
   position: relative;
   top: 0.15em;
-  transform: rotate(-45deg);
+  @include transform(rotate(-45deg));
   vertical-align: top;
   width: 0.45em;
 }
 .chevron.right:before {
   left: 0;
-  transform: rotate(45deg);
+  @include transform(rotate(45deg));
 }
 .chevron.bottom:before {
   top: 0;
-  transform: translateX(-25%) translateY(75%) translateY(1px) rotate(135deg);
+  @include transform(translateX(-25%) translateY(75%) translateY(1px) rotate(135deg));
 }
 .chevron.left:before {
   left: 0.25em;
-  transform: rotate(-135deg);
+  @include transform(rotate(-135deg));
 }
 
 /* ==================================
@@ -335,7 +342,7 @@ section header p {
 
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   .card-top {
     position: absolute;
