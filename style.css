@@ -154,6 +154,7 @@ section header p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); }
 
 .screenshot {
+  display: inline-block;
   margin: 0 1em;
   background-size: auto 340px; }
 
@@ -163,7 +164,6 @@ section header p {
   height: 300px; }
 
 .desktop.screenshot {
-  display: inline-block;
   background-image: url(desktop-screenshot-bg.png);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -176,7 +176,6 @@ section header p {
   border-radius: 10px 10px 0 0; }
 
 .mobile.screenshot {
-  display: inline-block;
   background-image: url(mobile-screenshot-bg.png);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -341,3 +340,5 @@ section header p {
     section:not(:first-child) .sswrapper {
       max-width: 47rem;
       margin: auto; } }
+
+/*# sourceMappingURL=style.css.map */

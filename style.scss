@@ -198,6 +198,8 @@ section header p {
 }
 
 .screenshot {
+  display: inline-block;
+
   margin: 0 1em;
   background-size: auto 340px;
 }
@@ -209,8 +211,6 @@ section header p {
 }
 
 .desktop.screenshot {
-  display: inline-block;
-
   background-image: url(desktop-screenshot-bg.png);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -227,8 +227,6 @@ section header p {
 }
 
 .mobile.screenshot {
-  display: inline-block;
-
   background-image: url(mobile-screenshot-bg.png);
   background-position: 0 0;
   background-repeat: no-repeat;
